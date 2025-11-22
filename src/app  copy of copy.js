@@ -15,6 +15,7 @@ const rules = {
 const jugar = (userChoise) => {
 
   let computerChoise = choises[Math.floor(Math.random() * 5)]
+  console.log(computerChoise)
   let resultado
   if (userChoise === computerChoise) {
 
@@ -23,19 +24,20 @@ const jugar = (userChoise) => {
   } else if (rules[computerChoise].includes(userChoise)) {
     resultado = "Has perdido"
   } else {
-    resultado = "Has ganado "
+    resultado = "Has ganado"
   }
 
-
-    return resultado
-  }
-
+  return resultado
+}
 
 
-  console.log(jugar("rock"));
 
 
-  document.getElementById("yankenkun").textContent = jugar("spock");
+
+console.log(jugar("rock"));
+
+
+//  document.getElementById("yankenkun").textContent = jugar ("spock");
 
 
 
