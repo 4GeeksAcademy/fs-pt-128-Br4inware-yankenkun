@@ -1,5 +1,5 @@
-//import "bootstrap";
-//import "./style.css";
+import "bootstrap";
+import "./style.css";
 
 //write your code here
 
