@@ -21,9 +21,9 @@ const jugar = (userChoise) => {
     resultado = "Esto es un empate!"
 
   } else if (rules[computerChoise].includes(userChoise)) {
-    resultado = "Has perdido"
+    resultado = `Has perdido, ${computerChoise} gana a ${userChoise}`
   } else {
-    resultado = "Has ganado "
+    resultado = `Has Ganado, ${userChoise} gana a ${computerChoise}`
   }
 
 
@@ -32,8 +32,13 @@ const jugar = (userChoise) => {
 
 
 
-  document.getElementById("yankenkun").textContent = jugar("spock");
-
+  document.getElementById("yankenkun").textContent = jugar();
+ /*  document.getElementById("btn-rock").textContent = jugar('rock');
+  document.getElementById("btn-paper").textContent = jugar('paper');
+  document.getElementById("btn-scissors").textContent = jugar('scissors');
+  document.getElementById("btn-lizard").textContent = jugar('lizard');
+  document.getElementById("btn-spock").textContent = jugar('spock');
+ */
 
 
 
