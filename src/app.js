@@ -32,9 +32,6 @@ const jugar = (userChoise) => {
 
 
 
-  console.log(jugar("rock"));
-
-
   document.getElementById("yankenkun").textContent = jugar("spock");
 
 
