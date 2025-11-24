@@ -12,33 +12,57 @@ const rules = {
   spock: ["scissors", "rock"],
 }
 
+
 const jugar = (userChoise) => {
+  let userCount = 0;
+  let computerCount = 0;
+
 
   let computerChoise = choises[Math.floor(Math.random() * 5)]
+  console.log(computerChoise)
   let resultado
   if (userChoise === computerChoise) {
 
     resultado = "Esto es un empate!"
 
   } else if (rules[computerChoise].includes(userChoise)) {
-    resultado = `Has perdido, ${computerChoise} gana a ${userChoise}`
+    resultado = "Has perdido " + computerChoise + " gana a " + userChoise
+    ++computerCount
   } else {
-    resultado = `Has Ganado, ${userChoise} gana a ${computerChoise}`
+    resultado = "Has ganado " + userChoise + " gana a " + computerChoise
+    ++userCount
   }
 
+  document.getElementById("score").textContent = `Jugador:  ${userCount} Maquina: ${computerCount}`;
+  return resultado
+}
 
-    return resultado
-  }
+
+
+document.getElementById("btn-rock").addEventListener("click", ()=>{
+
+  document.getElementById("yankenkun").textContent = jugar("spock");
+})
+document.getElementById("btn-paper").addEventListener("click", ()=>{
+
+  document.getElementById("yankenkun").textContent = jugar("paper");
+})
+document.getElementById("btn-scissors").addEventListener("click", ()=>{
+
+  document.getElementById("yankenkun").textContent = jugar("spock");
+})
+document.getElementById("btn-lizard").addEventListener("click", ()=>{
+
+  document.getElementById("yankenkun").textContent = jugar("spock");
+})
+document.getElementById("btn-spock").addEventListener("click", ()=>{
+
+  document.getElementById("yankenkun").textContent = jugar("spock");
+})
 
 
 
-  document.getElementById("yankenkun").textContent = jugar();
- /*  document.getElementById("btn-rock").textContent = jugar('rock');
-  document.getElementById("btn-paper").textContent = jugar('paper');
-  document.getElementById("btn-scissors").textContent = jugar('scissors');
-  document.getElementById("btn-lizard").textContent = jugar('lizard');
-  document.getElementById("btn-spock").textContent = jugar('spock');
- */
+
 
 
 
