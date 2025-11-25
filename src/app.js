@@ -13,13 +13,12 @@ const rules = {
 }
 
 
+let userCount = 0;
+let computerCount = 0;
 const jugar = (userChoise) => {
-  let userCount = 0;
-  let computerCount = 0;
 
 
-  let computerChoise = choises[Math.floor(Math.random() * 5)]
-  console.log(computerChoise)
+  let computerChoise = choises[Math.floor(Math.random() * choises.length)]
   let resultado
   if (userChoise === computerChoise) {
 
@@ -33,29 +32,30 @@ const jugar = (userChoise) => {
     ++userCount
   }
 
+
   document.getElementById("score").textContent = `Jugador:  ${userCount} Maquina: ${computerCount}`;
   return resultado
 }
 
 
 
-document.getElementById("btn-rock").addEventListener("click", ()=>{
+document.getElementById("btn-rock").addEventListener("click", () => {
 
   document.getElementById("yankenkun").textContent = jugar("rock");
 })
-document.getElementById("btn-paper").addEventListener("click", ()=>{
+document.getElementById("btn-paper").addEventListener("click", () => {
 
   document.getElementById("yankenkun").textContent = jugar("paper");
 })
-document.getElementById("btn-scissors").addEventListener("click", ()=>{
+document.getElementById("btn-scissors").addEventListener("click", () => {
 
   document.getElementById("yankenkun").textContent = jugar("scissors");
 })
-document.getElementById("btn-lizard").addEventListener("click", ()=>{
+document.getElementById("btn-lizard").addEventListener("click", () => {
 
   document.getElementById("yankenkun").textContent = jugar("lizard");
 })
-document.getElementById("btn-spock").addEventListener("click", ()=>{
+document.getElementById("btn-spock").addEventListener("click", () => {
 
   document.getElementById("yankenkun").textContent = jugar("spock");
 })
