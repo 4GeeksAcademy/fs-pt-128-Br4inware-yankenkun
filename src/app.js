@@ -41,7 +41,7 @@ const jugar = (userChoise) => {
 
 document.getElementById("btn-rock").addEventListener("click", ()=>{
 
-  document.getElementById("yankenkun").textContent = jugar("spock");
+  document.getElementById("yankenkun").textContent = jugar("rock");
 })
 document.getElementById("btn-paper").addEventListener("click", ()=>{
 
@@ -49,11 +49,11 @@ document.getElementById("btn-paper").addEventListener("click", ()=>{
 })
 document.getElementById("btn-scissors").addEventListener("click", ()=>{
 
-  document.getElementById("yankenkun").textContent = jugar("spock");
+  document.getElementById("yankenkun").textContent = jugar("scissors");
 })
 document.getElementById("btn-lizard").addEventListener("click", ()=>{
 
-  document.getElementById("yankenkun").textContent = jugar("spock");
+  document.getElementById("yankenkun").textContent = jugar("lizard");
 })
 document.getElementById("btn-spock").addEventListener("click", ()=>{
 
